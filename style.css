@@ -14,6 +14,12 @@ body {
     align-items: center;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .card {
     width: 300px;
     border: 1.3px black solid;
@@ -79,4 +85,8 @@ body {
 .username {
     font-size: 13px;
     font-weight: bold;
+}
+
+.attribution {
+    font-size: 11px;
 }
