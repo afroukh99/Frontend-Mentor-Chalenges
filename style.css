@@ -14,13 +14,13 @@ body {
     align-items: center;
 }
 
-.wrapper {
+main {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.card {
+article {
     width: 300px;
     border: 1.3px black solid;
     background-color: white;
@@ -87,6 +87,6 @@ body {
     font-weight: bold;
 }
 
-.attribution {
+footer {
     font-size: 11px;
 }
