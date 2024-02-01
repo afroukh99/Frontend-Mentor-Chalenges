@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Figtree', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(47, 88%, 63%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+    border: 1.3px black solid;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 25px;
+    box-shadow: 8px 8px 0px 0px black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.categorie {
+    width: 70px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    color: hsl(0, 0%, 7%);
+    background-color: hsl(47, 88%, 63%);
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+    background-color: hsl(47, 88%, 69%);
+    }
+
+}
+
+.date {
+    color: hsl(0, 0%, 7%);
+    font-size: 12px;
+    font-weight: 300;
+}
+.title {
+    font-size: 18px;
+    color: hsl(0, 0%, 7%);
+}
+.description {
+    font-size: 12px;
+    color:  hsl(0, 0%, 50%);
+    line-height: 1.5;
+}
+
+.user {
+    display: flex ;
+    gap:10px;
+    align-items: center;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.username {
+    font-size: 13px;
+    font-weight: bold;
+}
