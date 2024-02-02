@@ -63,7 +63,7 @@
 
  .desc {
      color: white;
-     font-size: clamp(8px, 2vw, 11px);
+     font-size: clamp(10px, 2vw, 11px);
      font-weight:500;
  }
 
