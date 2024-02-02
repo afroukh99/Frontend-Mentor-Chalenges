@@ -1,9 +1,8 @@
-
 :root {
     --bg-color: hsl(47, 88%, 63%);
     --txt-color-1: hsl(0, 0%, 7%);
     --txt-color-2: hsl(0, 0%, 50%);
-  }
+}
 
 
 * {
@@ -13,11 +12,13 @@
 }
 
 
+
+
 body {
     font-family: 'Figtree', sans-serif;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background-color:var(--bg-color) ;
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,34 +54,36 @@ article {
     border-radius: 5px;
     color: var(--txt-color-1);
     background-color: var(--bg-color);
-    font-size: 12px;
+    font-size: clamp(10px, 2vw, 12px);
     font-weight: bold;
     cursor: pointer;
 
     &:hover {
-    background-color: hsl(47, 88%, 69%);
+        background-color: hsl(47, 88%, 69%);
     }
 
 }
 
 .date {
     color: var(--txt-color-1);
-    font-size: 12px;
+    font-size: clamp(11px, 2vw, 13px);
     font-weight: 300;
 }
+
 .title {
-    font-size: 19px;
+    font-size: clamp(16px, 3vw, 20px);
     color: var(--txt-color-1);
 }
+
 .description {
-    font-size: 13px;
-    color:  var(--txt-color-2);
+    font-size: clamp(12px, 3vw, 16px);
+    color: var(--txt-color-2);
     line-height: 1.5;
 }
 
 .user {
-    display: flex ;
-    gap:10px;
+    display: flex;
+    gap: 10px;
     align-items: center;
     margin: 10px 0px;
     cursor: pointer;
@@ -91,19 +94,34 @@ article {
     height: 30px;
     object-fit: cover;
 }
+
 .username {
-    font-size: 13px;
+    font-size: clamp(11px, 2vw, 13px);
     font-weight: bold;
 }
 
 footer {
-    font-size: 11px;
+    font-size: clamp(9px, 2vw, 11px);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
 }
+
 .free-palestine {
     width: 20px;
     height: 20px;
+}
+
+
+
+@media (max-width: 375px) {
+    article {
+        width: 300px;
+    }
+
+    .img {
+        width: 250px;
+        height: 160px;
+    }
 }
