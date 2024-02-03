@@ -1,4 +1,4 @@
-# Frontend Mentor - Blog preview card
+# Frontend Mentor Challenges
 
 ## Welcome! 👋
 
