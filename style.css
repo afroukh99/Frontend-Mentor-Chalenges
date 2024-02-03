@@ -31,7 +31,7 @@ main {
 }
 
 article {
-    width: 500px;
+    width: 650px;
     background-color: white;
     border-radius: 10px;
     padding: 20px;
@@ -51,9 +51,9 @@ article {
     gap: 10px;
 }
 
-.presentation>img {
+.presentation img {
     width: 100%;
-    height: clamp(25vh, 33vh, 35vh);
+    height: clamp(30vh, 40vh, 50%);
     object-fit: cover;
     border-radius: 10px;
 }
@@ -61,12 +61,12 @@ article {
 .recipe-title {
     font-family: 'Young Serif', serif;
     color: var(--txt-color-1);
-    font-weight: 400;
-    font-size: clamp(17px, 2vw, 19px);
+    font-weight: 600;
+    font-size: clamp(24px, 3vw, 30px);
 }
 
 .description {
-    font-size: clamp(10px, 2vw, 12px);
+    font-size: clamp(12px, 2vw, 14px);
     color: var(--txt-color-3);
     line-height: 1.5;
 }
@@ -80,7 +80,9 @@ article {
 
 .prep-title {
     color: var(--secondary);
-    font-size: clamp(13px, 2vw, 15px);
+    font-size: clamp(15px, 2vw, 18px);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
 }
 
 ul {
@@ -88,7 +90,7 @@ ul {
 }
 
 ul>li {
-    font-size: clamp(10px, 2vw, 12px);
+    font-size: clamp(12px, 2vw, 15px);
     padding: 3px 10px;
     color: var(--txt-color-3);
 }
@@ -100,7 +102,7 @@ ul>li {
 
 h4 {
     color: var(--primary);
-    font-size: clamp(15px, 2vw, 17px);
+    font-size: clamp(17px, 2vw, 20px);
     font-weight: 500;
     font-family: 'Young Serif', serif;
 }
@@ -130,8 +132,8 @@ hr {
 }
 
 
-.instructions>ol>li {
-    font-size: clamp(10px, 2vw, 12px);
+.instructions ol li {
+    font-size: clamp(12px, 2vw, 15px);
     padding: 3px 10px;
     color: var(--txt-color-3);
     line-height: 1.5;
@@ -149,7 +151,7 @@ hr {
 .nutrition {}
 
 .nutrition .nurition-desc {
-    font-size: clamp(10px, 2vw, 12px);
+    font-size: clamp(12px, 2vw, 15px);
     color: var(--txt-color-3);
     margin: 10px 0px;
 }
@@ -158,7 +160,7 @@ hr {
     padding: 10px;
     width: 100%;
     color: var(--txt-color-3);
-    font-size: clamp(10px, 2vw, 12px);
+    font-size: clamp(12px, 2vw, 15px);
     border-collapse: collapse;
 }
 
@@ -186,7 +188,7 @@ table tr .active {
 
 
 footer {
-    font-size: clamp(10px, 2vw, 13px);
+    font-size: clamp(10px, 2vw, 16px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,10 +206,26 @@ footer>a:visited {
     height: 20px;
 }
 
+
+
+
+
+
 @media (max-width: 375px) {
+
     article {
-        width: 300px;
+        width: 100%;
+        margin-top: 0px !important;
+        height: 100vh ;
     }
 
+}
 
+
+@media (max-width: 682px) {
+    article {
+        width: 100%;
+        margin-top: 0px !important;
+        height: 100vh ;
+    }
 }
