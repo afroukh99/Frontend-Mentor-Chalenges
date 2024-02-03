@@ -1,0 +1,213 @@
+:root {
+    --bg-color-1: hsl(30, 54%, 90%);
+    --bg-color-2: hsl(330, 100%, 98%);
+    --primary: hsl(14, 45%, 36%);
+    --secondary: hsl(332, 51%, 32%);
+    --txt-color-1: hsl(24, 5%, 18%);
+    --txt-color-2: hsl(30, 18%, 87%);
+    --txt-color-3: hsl(30, 10%, 34%);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif, 'Young Serif', serif;
+    width: 100%;
+    background-color: var(--bg-color-1);
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+article {
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*Start Style presentation section*/
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.presentation>img {
+    width: 100%;
+    height: clamp(25vh, 33vh, 35vh);
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.recipe-title {
+    font-family: 'Young Serif', serif;
+    color: var(--txt-color-1);
+    font-weight: 400;
+    font-size: clamp(17px, 2vw, 19px);
+}
+
+.description {
+    font-size: clamp(10px, 2vw, 12px);
+    color: var(--txt-color-3);
+    line-height: 1.5;
+}
+
+.preparation {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--bg-color-2);
+}
+
+.prep-title {
+    color: var(--secondary);
+    font-size: clamp(13px, 2vw, 15px);
+}
+
+ul {
+    padding: 5px 20px;
+}
+
+ul>li {
+    font-size: clamp(10px, 2vw, 12px);
+    padding: 3px 10px;
+    color: var(--txt-color-3);
+}
+
+
+.ingredients {
+    padding: 10px;
+}
+
+h4 {
+    color: var(--primary);
+    font-size: clamp(15px, 2vw, 17px);
+    font-weight: 500;
+    font-family: 'Young Serif', serif;
+}
+
+.ingredients>ul>li {
+    list-style-type: square;
+
+    &::marker {
+        color: var(--primary);
+    }
+}
+
+/*End Style presentation section*/
+
+hr {
+    height: 0px;
+    border: 1px solid var(--txt-color-2);
+}
+
+/*Start Style Instructions section*/
+.instructions {}
+
+
+.instructions>ol {
+    padding: 5px 20px;
+
+}
+
+
+.instructions>ol>li {
+    font-size: clamp(10px, 2vw, 12px);
+    padding: 3px 10px;
+    color: var(--txt-color-3);
+    line-height: 1.5;
+
+    &::marker {
+        color: var(--primary);
+        font-weight: 600;
+        font-family: 'Outfit', sans-serif;
+    }
+}
+
+/*End Style Instructions section*/
+
+/*End Style Nutrition section*/
+.nutrition {}
+
+.nutrition .nurition-desc {
+    font-size: clamp(10px, 2vw, 12px);
+    color: var(--txt-color-3);
+    margin: 10px 0px;
+}
+
+.nutrition table {
+    padding: 10px;
+    width: 100%;
+    color: var(--txt-color-3);
+    font-size: clamp(10px, 2vw, 12px);
+    border-collapse: collapse;
+}
+
+/* border here not working*/
+table .on {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tr td {
+    padding: 10px;
+    border-radius: 3px;
+    text-align: left;
+}
+
+table tr .active {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+
+
+
+/*End Style Nutrition section*/
+
+
+
+footer {
+    font-size: clamp(10px, 2vw, 13px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+    color: var(--txt-color-1);
+}
+
+footer>a:visited {
+    color: var(--primary);
+}
+
+.free-palestine {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 375px) {
+    article {
+        width: 300px;
+    }
+
+
+}
