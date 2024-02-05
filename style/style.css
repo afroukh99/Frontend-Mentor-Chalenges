@@ -1,0 +1,126 @@
+:root {
+  --bg-color: hsl(275, 100%, 97%);
+  --primary: hsl(292, 42%, 14%);
+  --secondary: hsl(292, 16%, 49%);
+  --fs-xl: clamp(1.75em, 3vw, 2.5em);
+  --fs-300: clamp(0.9em, 1.5vw, 1.125em);
+  --fs-200: clamp(0.7em , 2vw ,1em);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color);
+  background-image: url("../assets/images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body main article {
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 11px -3px var(--secondary);
+  -webkit-box-shadow: 0px 4px 11px -3px var(--secondary);
+  -moz-box-shadow: 0px 4px 11px -3px var(--secondary);
+}
+body main article .container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body main article .container header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+body main article .container header img {
+  width: var(--fs-xl);
+  height: var(--fs-xl);
+}
+body main article .container header h1 {
+  font-size: var(--fs-xl);
+}
+body main article .container .sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+body main article .container .sections-container section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid lightgray;
+  padding: 10px;
+}
+body main article .container .sections-container section:last-child {
+  border-bottom: none;
+}
+body main article .container .sections-container section header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+body main article .container .sections-container section header h2 {
+  font-size: var(--fs-300);
+  font-weight: 600;
+}
+body main article .container .sections-container section header h2:hover {
+  color: var(--primary);
+}
+body main article .container .sections-container section p {
+  font-size: var(--fs-300);
+  line-height: 1.5;
+  color: var(--secondary);
+}
+body main article .container .sections-container section p.disabled {
+  display: none;
+}
+body main footer {
+  font-size: var(--fs-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+body main footer a:visited {
+  color: var(--secondary);
+}
+body main footer .free-palestine {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 550px) {
+  body main article {
+    width: 400px;
+  }
+}
+@media (max-width: 430px) {
+  body main article {
+    width: 300px;
+    margin: 20px auto;
+  }
+}
+@media (max-width: 300px) {
+  body main article {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

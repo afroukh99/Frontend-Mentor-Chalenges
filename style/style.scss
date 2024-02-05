@@ -1,0 +1,174 @@
+:root {
+    --bg-color: hsl(275, 100%, 97%);
+    --primary: hsl(292, 42%, 14%);
+    --secondary: hsl(292, 16%, 49%);
+
+    --fs-xl: clamp(1.75em, 3vw, 2.5em);
+    --fs-300: clamp(0.9em, 1.5vw, 1.125em);
+    --fs-200: clamp(0.7em , 2vw ,1em);
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    background-image: url("../assets/images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        article {
+            width: 500px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 11px -3px var(--secondary);
+            -webkit-box-shadow: 0px 4px 11px -3px var(--secondary);
+            -moz-box-shadow: 0px 4px 11px -3px var(--secondary);
+
+            .container {
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                header {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    img {
+                        width: var(--fs-xl);
+                        height: var(--fs-xl);
+                    }
+
+                    h1 {
+                        font-size: var(--fs-xl);
+                    }
+                }
+
+
+                .sections-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    section {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        border-bottom: 1px solid lightgray;
+                        padding: 10px;
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+
+                        header {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            cursor: pointer;
+
+                            h2 {
+                                font-size: var(--fs-300);
+                                font-weight: 600;
+
+                                &:hover {
+                                    color: var(--primary);
+                                }
+                            }
+
+
+                        }
+
+                        p {
+                            font-size: var(--fs-300);
+                            line-height: 1.5;
+                            color: var(--secondary);
+
+                            &.disabled {
+                                display: none;
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+
+
+
+        footer {
+            font-size: var(--fs-200);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 15px;
+            color: var(--primary);
+
+
+            a:visited {
+                color: var(--secondary);
+            }
+
+            .free-palestine {
+                width: 20px;
+                height: 20px;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            article {
+                width: 400px;
+            }
+        }
+
+
+        @media (max-width: 430px) {
+
+            article {
+                width: 300px;
+                margin: 20px auto;
+            }
+        }
+
+
+        @media (max-width: 300px) {
+
+            article {
+                width: 100%;
+            }
+        }
+
+
+
+    }
+
+
+}
