@@ -2,6 +2,7 @@
   --bg-color: hsl(275, 100%, 97%);
   --primary: hsl(292, 42%, 14%);
   --secondary: hsl(292, 16%, 49%);
+  --purple:rgb(173,40,235);
   --fs-xl: clamp(1.75em, 3vw, 2.5em);
   --fs-300: clamp(0.9em, 1.5vw, 1.125em);
   --fs-200: clamp(0.7em , 2vw ,1em);
@@ -82,7 +83,7 @@ body main article .container .sections-container section header h2 {
   font-weight: 600;
 }
 body main article .container .sections-container section header h2:hover {
-  color: var(--primary);
+  color: var(--purple);
 }
 body main article .container .sections-container section p {
   font-size: var(--fs-300);
