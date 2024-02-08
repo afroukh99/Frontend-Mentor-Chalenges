@@ -84,12 +84,12 @@ body .card .container .up .input-container input {
 }
 body .card .container .up .input-container input::-moz-placeholder {
   color: var(--off-black);
-  font-size: var(--fs-400);
+  font-size: var(--fs-300);
   font-weight: 700;
 }
 body .card .container .up .input-container input::placeholder {
   color: var(--off-black);
-  font-size: var(--fs-400);
+  font-size: var(--fs-300);
   font-weight: 700;
 }
 body .card .container .up .input-container .err-message {
@@ -153,7 +153,7 @@ body .card .container .down span {
 @media (max-width: 375px) {
   body .card {
     width: 300px;
-    height: 45vh;
+    height: 48vh;
     padding: 20px 0px;
   }
   body .card .container .up {
