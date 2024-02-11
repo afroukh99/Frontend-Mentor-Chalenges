@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <!--Style file-->
+  <link rel="stylesheet" href="./style/style.css">
+  <!--Font family-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Notifications page</title>
+</head>
+
+<body>
+  <article>
+    <div class="container">
+      <header>
+        <h3>Notifications <span class="count"></span></h3>
+        <span class="read-all">Mark all as read</span>
+      </header>
+      <section>
+
+        <div class="notification active">
+          <img class="avatar" src="./assets/images/avatar-anna-kim.webp" alt="">
+          <div class="content">
+            <p class="unread">
+              <strong>Mark Webber </strong>reacted your recent post
+              <span class="">My first tournament today!</span>
+            </p>
+            <time>1m ago</time>
+          </div>
+        </div>
+
+        <div class="notification active">
+          <img class="avatar" src="./assets/images/avatar-angela-gray.webp" alt="">
+          <div class="content">
+            <p class="unread">
+              <strong>Jackson Miller </strong>followed you
+            </p>
+            <time class="">3m ago</time>
+          </div>
+        </div>
+
+        <div class="notification active">
+          <img class="avatar" src="./assets/images/avatar-jacob-thompson.webp" alt="">
+          <div class="content">
+            <p class="unread">
+              <strong>Noah Davis </strong>reacted your recent post
+              <span class="">Chess Club</span>
+            </p>
+            <time class="">12h ago</time>
+          </div>
+        </div>
+
+        <div class="notification">
+          <img class="avatar" src="./assets/images/avatar-kimberly-smith.webp" alt="">
+          <div class="content active">
+            <p>
+              <strong>Alexander Rodriguez </strong>sent you a private message
+            </p>
+            <time class="">1d ago</time>
+            <p class="message">
+              Hello there! 🌟 Embrace the day with a smile, and let kindness be the language your heart speaks.
+              May your journey be filled with joy and positive moments.
+            </p>
+          </div>
+        </div>
+
+        <div class="notification">
+          <img class="avatar" src="./assets/images/avatar-mark-webber.webp" alt="">
+          <div class="content">
+            <div class="img-notification">
+              <p class="">
+                <strong>Ethan Moore </strong>commented on your picture
+              </p>
+              <img class="post-pic" src="./assets/images/image-chess.webp" alt="">
+            </div>
+            <time>3days ago</time>
+          </div>
+        </div>
+
+        <div class="notification">
+          <img class="avatar" src="./assets/images/avatar-nathan-peterson.webp" alt="">
+          <div class="content">
+            <p>
+              <strong>Sophia Brown </strong>reacted to your recent post
+              <span>5 end-game strategies to increase your win rate</span>
+            </p>
+            <time>2week ago</time>
+          </div>
+        </div>
+
+        <div class="notification">
+          <img class="avatar" src="./assets/images/avatar-rizky-hasanuddin.webp" alt="">
+          <div class="content">
+            <p>
+              <strong>Harper Ross </strong>left the group
+              <span class="">Chess Club</span>
+            </p>
+            <time>3week ago</time>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </article>
+
+<script src="./index.js"></script>
+</body>
+
+</html>
