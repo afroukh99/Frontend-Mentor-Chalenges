@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(235, 18%, 26%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body button {
+  border: none;
+  color: white;
+  font-size: clamp(1.25rem, 1.25vw, 1.5rem);
+  font-weight: 700;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: hsl(234, 29%, 20%);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+body button:hover {
+  background: linear-gradient(to right, hsl(12, 90%, 67%), hsl(4, 100%, 67%));
+  box-shadow: 5px 5px 18px 0px hsl(4, 100%, 67%);
+  -webkit-box-shadow: 5px 5px 18px 0px hsl(4, 100%, 67%);
+  -moz-box-shadow: 5px 5px 18px 0px hsl(4, 100%, 67%);
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+body main article {
+  background-color: white;
+  border-radius: 3rem;
+  box-shadow: 0px 4px 11px -3px hsl(234, 29%, 20%);
+  -webkit-box-shadow: 0px 4px 11px -3px hsl(234, 29%, 20%);
+  -moz-box-shadow: 0px 4px 11px -3px hsl(234, 29%, 20%);
+}
+body main .form-article.disabled {
+  display: none;
+}
+@media (max-width: 655px) {
+  body main .form-article {
+    border-radius: 0rem;
+    width: 80vw;
+    height: 100vh;
+  }
+}
+@media (max-width: 440px) {
+  body main .form-article {
+    border-radius: 0rem;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+body main .form-article .container {
+  width: 70vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+@media (max-width: 980px) {
+  body main .form-article .container {
+    width: 95vw;
+  }
+}
+@media (max-width: 655px) {
+  body main .form-article .container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0rem;
+  }
+}
+body main .form-article .container .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem;
+}
+@media (max-width: 655px) {
+  body main .form-article .container .left {
+    flex: 3;
+    order: 2;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+}
+body main .form-article .container .left h1 {
+  color: hsl(234, 29%, 20%);
+  font-size: clamp(3rem, 2vw + 2.5rem, 4.5rem);
+}
+body main .form-article .container .left .desc {
+  color: hsl(234, 29%, 20%);
+  font-size: clamp(1.5rem, 1vw + 0.9rem, 2rem);
+  line-height: 1.2;
+}
+body main .form-article .container .left .features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+body main .form-article .container .left .features .feature {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: hsl(235, 18%, 26%);
+}
+body main .form-article .container .left .features .feature img {
+  width: clamp(1.5rem, 1vw + 0.9rem, 2rem);
+  height: clamp(1.5rem, 1vw + 0.9rem, 2rem);
+}
+body main .form-article .container .left .features .feature span {
+  font-size: clamp(1.25rem, 1.25vw, 1.5rem);
+  font-weight: 400;
+}
+body main .form-article .container .left .input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+body main .form-article .container .left .input-container .top {
+  display: flex;
+  justify-content: space-between;
+}
+body main .form-article .container .left .input-container .top label {
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  font-size: clamp(1rem, 1vw, 1.25rem);
+}
+body main .form-article .container .left .input-container .top .error-msg {
+  display: none;
+}
+body main .form-article .container .left .input-container .top .error-msg.active {
+  display: block;
+  color: hsl(4, 100%, 67%);
+  font-size: clamp(1rem, 1vw, 1.25rem);
+  font-weight: 700;
+}
+body main .form-article .container .left .input-container input {
+  width: 100%;
+  border: none;
+  border: 1.5px solid hsl(231, 7%, 60%);
+  border-radius: 0.5rem;
+  padding: clamp(1.25rem, 1.25vw, 1.5rem);
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+body main .form-article .container .left .input-container input:focus {
+  border: 1.5px solid hsl(234, 29%, 20%);
+}
+body main .form-article .container .left .input-container input.active {
+  border-color: hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+  background-color: rgba(255, 98, 87, 0.1);
+}
+body main .form-article .container .right {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/images/illustration-sign-up-desktop.svg") center;
+  background-size: cover;
+  border-radius: 2rem;
+}
+@media (max-width: 655px) {
+  body main .form-article .container .right {
+    flex: 2;
+    background: url("../assets/images/illustration-sign-up-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    order: 1;
+    border-radius: 0rem 0rem 1.5rem 1.5rem;
+  }
+}
+body main .message-article {
+  width: 40vw;
+  min-height: 60vh;
+}
+body main .message-article.disabled {
+  display: none;
+}
+@media (max-width: 900px) {
+  body main .message-article {
+    width: 50vw;
+  }
+}
+@media (max-width: 640px) {
+  body main .message-article {
+    width: 60vw;
+  }
+}
+@media (max-width: 475px) {
+  body main .message-article {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0rem;
+  }
+}
+body main .message-article .message-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+  padding: 5rem;
+}
+@media (max-width: 475px) {
+  body main .message-article .message-container {
+    padding: 2rem;
+  }
+}
+body main .message-article .message-container img {
+  width: clamp(4rem, 3vw + 2.5rem, 5.5rem);
+  height: clamp(4rem, 3vw + 2.5rem, 5.5rem);
+}
+@media (max-width: 475px) {
+  body main .message-article .message-container img {
+    margin-top: auto;
+  }
+}
+body main .message-article .message-container h1 {
+  color: hsl(234, 29%, 20%);
+  font-size: clamp(3rem, 2vw + 2.5rem, 4.5rem);
+  font-weight: 700;
+}
+body main .message-article .message-container p {
+  color: hsl(235, 18%, 26%);
+  font-size: clamp(1.5rem, 1vw + 0.9rem, 2rem);
+  line-height: 1.3;
+}
+@media (max-width: 475px) {
+  body main .message-article .message-container .dismiss {
+    margin-top: auto;
+  }
+}
+body main footer {
+  font-size: clamp(1rem, 1vw, 1.25rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+body main footer a:visited {
+  color: hsl(4, 100%, 67%);
+}
+body main footer .free-palestine {
+  width: clamp(1.5rem, 1vw + 0.9rem, 2rem);
+  height: clamp(1.5rem, 1vw + 0.9rem, 2rem);
+}/*# sourceMappingURL=style.css.map */

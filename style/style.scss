@@ -1,0 +1,354 @@
+//Globale Variables :
+//--Colors :
+$Tomato: hsl(4, 100%, 67%);
+$DarkSlateGrey: hsl(234, 29%, 20%);
+$CharcoalGrey: hsl(235, 18%, 26%);
+$Grey: hsl(231, 7%, 60%);
+
+//Font Family
+$spacimen-roboto: "Roboto", sans-serif;
+
+//Font sizes
+$txt-xl: clamp(4rem, 3vw + 2.5rem, 5.5rem);
+$txt-400: clamp(3rem, 2vw + 2.5rem, 4.5rem);
+$txt-300: clamp(2rem, 1.5vw + 1.5rem, 3rem);
+$txt-200: clamp(1.5rem, 1vw + .9rem, 2rem);
+$txt-100: clamp(1.25rem, 1.25vw, 1.5rem);
+$txt-50: clamp(1rem, 1vw, 1.25rem);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+
+body {
+    font-size: 1.6rem;
+    font-family: $spacimen-roboto;
+    background-color: $CharcoalGrey;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+    button {
+        border: none;
+        color: white;
+        font-size: $txt-100;
+        font-weight: 700;
+        padding: 1.5rem;
+        border-radius: .5rem;
+        background-color: $DarkSlateGrey;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease;
+
+        &:hover {
+            background: linear-gradient(to right, hsl(12, 90%, 67%), $Tomato);
+            box-shadow: 5px 5px 18px 0px $Tomato;
+            -webkit-box-shadow: 5px 5px 18px 0px $Tomato;
+            -moz-box-shadow: 5px 5px 18px 0px $Tomato;
+        }
+    }
+
+    main {
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        article {
+            background-color: white;
+            border-radius: 3rem;
+            box-shadow: 0px 4px 11px -3px $DarkSlateGrey;
+            -webkit-box-shadow: 0px 4px 11px -3px $DarkSlateGrey;
+            -moz-box-shadow: 0px 4px 11px -3px $DarkSlateGrey;
+
+        }
+
+        .form-article {
+
+
+            &.disabled {
+                display: none;
+            }
+
+            @media (max-width:655px) {
+                border-radius: 0rem;
+                width: 80vw;
+                height: 100vh;
+            }
+
+            @media (max-width : 440px) {
+                border-radius: 0rem;
+                width: 100vw;
+                height: 100vh;
+            }
+
+
+
+            .container {
+                width: 70vw;
+                height: 80vh;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                padding: 2rem;
+
+                @media (max-width:980px) {
+                    width: 95vw;
+                }
+
+                @media (max-width:655px) {
+                    flex-direction: column;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0rem;
+                }
+
+                .left {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    padding: 4rem;
+
+                    @media (max-width:655px) {
+                        flex: 3;
+                        order: 2;
+                        justify-content: space-between;
+                        padding: 2rem;
+                    }
+
+
+
+                    h1 {
+                        color: $DarkSlateGrey;
+                        font-size: $txt-400;
+                    }
+
+                    .desc {
+                        color: $DarkSlateGrey;
+                        font-size: $txt-200;
+                        line-height: 1.2;
+                    }
+
+                    .features {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        margin-bottom: 1rem;
+
+                        .feature {
+                            display: flex;
+                            align-items: center;
+                            gap: 1.5rem;
+                            color: $CharcoalGrey;
+
+                            img {
+                                width: $txt-200;
+                                height: $txt-200;
+                            }
+
+                            span {
+                                font-size: $txt-100;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+
+                    .input-container {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: .5rem;
+
+
+                        .top {
+                            display: flex;
+                            justify-content: space-between;
+
+                            label {
+                                color: $DarkSlateGrey;
+                                font-weight: 700;
+                                font-size: $txt-50;
+                            }
+
+                            .error-msg {
+                                display: none;
+
+                                &.active {
+                                    display: block;
+                                    color: $Tomato;
+                                    font-size: $txt-50;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+
+                        input {
+                            width: 100%;
+                            border: none;
+                            border: 1.5px solid $Grey;
+                            border-radius: .5rem;
+                            padding: $txt-100;
+                            color: $DarkSlateGrey;
+                            font-weight: 700;
+                            cursor: pointer;
+                            outline: none;
+
+                            &:focus {
+                                border: 1.5px solid $DarkSlateGrey;
+                            }
+
+
+                            &.active {
+                                border-color: $Tomato;
+                                color: $Tomato;
+                                background-color: rgba($Tomato, .1);
+                            }
+
+                        }
+                    }
+
+
+
+                }
+
+                .right {
+                    flex: 1;
+                    width: 100%;
+                    height: 100%;
+                    background: url("../assets/images/illustration-sign-up-desktop.svg") center;
+                    background-size: cover;
+                    border-radius: 2rem;
+
+
+
+                    @media (max-width:655px) {
+                        flex: 2;
+                        background: url("../assets/images/illustration-sign-up-mobile.svg");
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        order: 1;
+                        border-radius: 0rem 0rem 1.5rem 1.5rem;
+                    }
+
+
+                }
+            }
+        }
+
+        .message-article {
+            width: 40vw;
+            min-height: 60vh;
+
+            &.disabled {
+                display: none;
+            }
+
+            @media (max-width : 900px) {
+                width: 50vw;
+            }
+
+            @media (max-width : 640px) {
+                width: 60vw;
+            }
+
+            @media (max-width : 475px) {
+                width: 100vw;
+                height: 100vh;
+                border-radius: 0rem;
+            }
+
+
+
+
+
+
+
+            .message-container {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                gap: 2.5rem;
+                flex-direction: column;
+                padding: 5rem;
+
+
+                @media (max-width : 475px) {
+                    padding: 2rem;
+                }
+
+
+
+
+
+                img {
+                    width: $txt-xl;
+                    height: $txt-xl;
+
+                    @media (max-width : 475px) {
+                        margin-top: auto;
+                    }
+                }
+
+                h1 {
+                    color: $DarkSlateGrey;
+                    font-size: $txt-400;
+                    font-weight: 700;
+                }
+
+                p {
+                    color: $CharcoalGrey;
+                    font-size: $txt-200;
+                    line-height: 1.3;
+                }
+
+                .dismiss {
+                    @media (max-width : 475px) {
+                        margin-top: auto;
+                    }
+                }
+
+            }
+        }
+
+
+
+        //Footer style end
+        footer {
+            font-size: $txt-50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+
+
+            a:visited {
+                color: $Tomato;
+            }
+
+            .free-palestine {
+                width: $txt-200;
+                height: $txt-200;
+            }
+
+        }
+
+        //Footer style end
+
+    }
+}
