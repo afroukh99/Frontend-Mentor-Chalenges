@@ -260,6 +260,9 @@ body main footer {
   margin-bottom: 1.5rem;
   color: white;
 }
+body main footer a {
+  color: hsl(4, 100%, 67%);
+}
 body main footer a:visited {
   color: hsl(4, 100%, 67%);
 }
